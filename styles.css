@@ -1201,7 +1201,7 @@ body {
         margin-right: 0;
         text-align: left;
         padding-left: 2rem;
-        padding-right: 0;
+        padding-right: 2rem;
     }
 
     .timeline-item:nth-child(odd) .timeline-content::before,
