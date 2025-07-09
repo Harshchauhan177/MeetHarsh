@@ -185,59 +185,7 @@ function handleContactForm(e) {
 
 // Download Resume
 function downloadResume() {
-    // Create a simple resume content (you can replace this with actual file download)
-    const resumeContent = `
-Harsh Kumar
-iOS Developer & B.Tech CSE Student
-
-CONTACT
-Email: harsh7617rajput@gmail.com
-Phone: +91 8865830411
-Location: Uttar Pradesh, India
-
-EDUCATION
-B.Tech Computer Science & Engineering (2022-2026)
-Galgotias University
-GPA: 8.22
-
-PCM (2021-2022)
-MSBSVMIC Jaitra Bijnor
-Percentage: 74.6%
-
-EXPERIENCE
-iOS Developer Intern (Mar-Apr 2025)
-Infosys, Mysore
-- Developed real-time multi-role iOS app with AWS-based AI search
-- Worked with Agile methodology using Jira and GitHub
-- Participated in leadership training focusing on communication & collaboration
-
-SKILLS
-Languages: Swift, Python, Java, HTML, CSS, JavaScript
-Tools: Xcode, VS Code, Git, Jira
-Frameworks: SwiftUI, OpenCV
-Backend: Supabase, MongoDB
-
-PROJECTS
-- EcoVenture: Environmental awareness game with SwiftUI
-- WealthHome: Real estate platform with HTML/CSS/JS
-- Document Scanner: C++ and OpenCV based scanner
-- iKisan App: Equipment rental platform for farmers
-
-CERTIFICATIONS
-- Design Thinking (Infosys)
-- Data Fundamentals (IBM)
-- AI Fundamentals (IBM)
-    `;
-    
-    const blob = new Blob([resumeContent], { type: 'text/plain' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Harsh_Kumar_Resume.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+    window.open('https://drive.google.com/file/d/1WGCagtumh-q57BtT1QAkYIOSuFmWUM5m/view?usp=sharing', '_blank');
 }
 
 // Intersection Observer for animations
