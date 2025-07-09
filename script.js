@@ -14,29 +14,24 @@ const projects = {
         title: 'EcoVenture',
         description: 'An environmental awareness game built with SwiftUI that features multiple levels, coin collection system, and real-world action challenges. Players learn about environmental conservation through interactive gameplay while earning rewards for completing eco-friendly tasks.',
         tech: ['SwiftUI', 'Game Development', 'Core Data', 'SpriteKit'],
-        github: 'https://github.com/harshkumar/ecoventure',
-        demo: 'https://ecoventure.app'
+        github: 'https://github.com/Harshchauhan177/EcoVentureRepo'
     },
     wealthhome: {
         title: 'WealthHome',
         description: 'A comprehensive real estate platform built with modern web technologies. Features include property listings, advanced search filters, user authentication, and a responsive design that works seamlessly across all devices.',
-        tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
-        github: 'https://github.com/harshkumar/wealthhome',
-        demo: 'https://wealthhome.com'
+        tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Supabase'],
+        github: 'https://github.com/Harshchauhan177/WealthHome',
+        demo: 'https://harshchauhan177.github.io/WealthHome/'
     },
     scanner: {
         title: 'Document Scanner',
         description: 'A sophisticated document scanning application built with C++ and OpenCV. Features include automatic A4 page detection, edge detection, perspective correction, and high-quality image processing for optimal document digitization.',
-        tech: ['C++', 'OpenCV', 'Computer Vision', 'Image Processing'],
-        github: 'https://github.com/harshkumar/scanner',
-        demo: 'https://scanner-demo.com'
+        tech: ['C++', 'OpenCV', 'Computer Vision', 'Image Processing']
     },
     ikisan: {
         title: 'iKisan App',
         description: 'A comprehensive farming equipment rental platform designed specifically for farmers in Uttar Pradesh. Features include AI-powered recommendations via Gemini API, secure payment processing with Razorpay, and seamless Apple Sign-In integration.',
-        tech: ['SwiftUI', 'Supabase', 'Razorpay', 'Gemini API', 'Apple Sign-In'],
-        github: 'https://github.com/harshkumar/ikisan',
-        demo: 'https://ikisan.app'
+        tech: ['SwiftUI', 'Supabase', 'Razorpay', 'Gemini API', 'Apple Sign-In']
     }
 };
 
@@ -132,8 +127,18 @@ function openProjectModal(projectId) {
     const githubLink = document.getElementById('modal-github');
     const demoLink = document.getElementById('modal-demo');
     
-    githubLink.href = project.github;
-    demoLink.href = project.demo;
+    if (project.github) {
+        githubLink.href = project.github;
+        githubLink.style.display = 'inline-block';
+    } else {
+        githubLink.style.display = 'none';
+    }
+    if (project.demo) {
+        demoLink.href = project.demo;
+        demoLink.style.display = 'inline-block';
+    } else {
+        demoLink.style.display = 'none';
+    }
     
     projectModal.style.display = 'block';
     document.body.style.overflow = 'hidden';
