@@ -162,31 +162,27 @@ function closeProjectModal() {
 }
 
 // Contact Form
-function handleContactForm(e) {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const btnText = submitBtn.querySelector('.btn-text');
-    const btnIcon = submitBtn.querySelector('.btn-icon');
-    
-    // Simulate form submission
-    submitBtn.disabled = true;
-    btnText.textContent = 'Sending...';
-    
-    setTimeout(() => {
-        submitBtn.classList.add('success');
-        btnText.textContent = 'Message Sent!';
-        
-        // Reset form
-        setTimeout(() => {
-            contactForm.reset();
-            submitBtn.classList.remove('success');
-            btnText.textContent = 'Send Message';
-            submitBtn.disabled = false;
-        }, 2000);
-    }, 1500);
-}
+// function handleContactForm(e) {
+//     e.preventDefault();
+//     const formData = new FormData(contactForm);
+//     const submitBtn = contactForm.querySelector('button[type="submit"]');
+//     const btnText = submitBtn.querySelector('.btn-text');
+//     const btnIcon = submitBtn.querySelector('.btn-icon');
+//     // Simulate form submission
+//     submitBtn.disabled = true;
+//     btnText.textContent = 'Sending...';
+//     setTimeout(() => {
+//         submitBtn.classList.add('success');
+//         btnText.textContent = 'Message Sent!';
+//         // Reset form
+//         setTimeout(() => {
+//             contactForm.reset();
+//             submitBtn.classList.remove('success');
+//             btnText.textContent = 'Send Message';
+//             submitBtn.disabled = false;
+//         }, 2000);
+//     }, 1500);
+// }
 
 // Download Resume
 function downloadResume() {
@@ -243,7 +239,7 @@ function init() {
     });
     
     // Contact form
-    contactForm.addEventListener('submit', handleContactForm);
+    // contactForm.addEventListener('submit', handleContactForm);
     
     // Download resume
     if (downloadResumeBtn) {
