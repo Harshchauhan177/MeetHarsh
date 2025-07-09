@@ -324,18 +324,23 @@ body {
 }
 
 .btn-secondary {
-    background: linear-gradient(135deg, #7f53ac 0%, #647dee 100%);
-    color: #fff !important;
-    box-shadow: 0 4px 16px rgba(100, 125, 222, 0.18);
-    border: none;
-    font-weight: 600;
+    background: #FFD700 !important; /* Gold/yellow */
+    color: #222 !important; /* Dark text for contrast */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border: 2px solid #fff;
+    font-weight: 700;
     letter-spacing: 0.5px;
-    transition: background 0.2s, box-shadow 0.2s;
+    border-radius: 32px;
+    padding: 0.85rem 2.2rem;
+    font-size: 1.25rem;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
 }
 
 .btn-secondary:hover {
-    background: linear-gradient(135deg, #647dee 0%, #7f53ac 100%);
-    box-shadow: 0 6px 24px rgba(100, 125, 222, 0.28);
+    background: #FFC300 !important; /* Deeper gold on hover */
+    color: #111 !important;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    border: 2px solid #FFD700;
 }
 
 .btn-outline {
@@ -1404,23 +1409,25 @@ body {
 }
 
 .hero-title, .title-line {
-    color: #fff !important;
+    color: #FFD700 !important; /* Gold/yellow for high contrast on red */
     text-shadow: 0 4px 24px rgba(0,0,0,0.45), 0 1.5px 0 #222;
 }
 
 .btn-secondary {
-    background: linear-gradient(135deg, #7f53ac 0%, #647dee 100%);
-    color: #fff !important;
+    background: #fff !important;
+    color: #c1121f !important; /* Deep red text for the button */
     box-shadow: 0 4px 16px rgba(100, 125, 222, 0.18);
-    border: none;
-    font-weight: 600;
+    border: 2px solid #c1121f;
+    font-weight: 700;
     letter-spacing: 0.5px;
-    transition: background 0.2s, box-shadow 0.2s;
+    transition: background 0.2s, box-shadow 0.2s, color 0.2s;
 }
 
 .btn-secondary:hover {
-    background: linear-gradient(135deg, #647dee 0%, #7f53ac 100%);
+    background: #ffe066 !important; /* Light gold on hover */
+    color: #c1121f !important;
     box-shadow: 0 6px 24px rgba(100, 125, 222, 0.28);
+    border: 2px solid #c1121f;
 }
 
 /* Remove forced white background for experience-item and related cards */
